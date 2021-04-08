@@ -42,3 +42,6 @@ For design prepration and setup, ***prep -design picorv32*** :
 
 
 ![Screenshot from 2021-04-08 16-25-25](https://user-images.githubusercontent.com/36249257/114043988-12e5f780-9887-11eb-9e87-529e5272c39f.png)
+
+![Screenshot from 2021-04-08 16-32-19](https://user-images.githubusercontent.com/36249257/114045085-0ca44b00-9888-11eb-8306-85822edc43b8.png)
+
