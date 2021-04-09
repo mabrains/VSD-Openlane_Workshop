@@ -102,3 +102,18 @@ The layout after placement stage:
 
 ![Screenshot from 2021-04-08 16-32-19](https://user-images.githubusercontent.com/36249257/114045085-0ca44b00-9888-11eb-8306-85822edc43b8.png)
 
+![Screenshot from 2021-04-09 20-38-58](https://user-images.githubusercontent.com/36249257/114244385-a524f300-998e-11eb-94f7-14a70d6ee43b.png)
+
+![Screenshot from 2021-04-09 23-01-17](https://user-images.githubusercontent.com/36249257/114244407-ae15c480-998e-11eb-8b7a-9c33fea0a92f.png)
+
+![Screenshot from 2021-04-09 23-04-30](https://user-images.githubusercontent.com/36249257/114244420-b7069600-998e-11eb-9288-39b21ee7a1e2.png)
+
+![Screenshot from 2021-04-09 23-05-50](https://user-images.githubusercontent.com/36249257/114244446-bec63a80-998e-11eb-9c2d-8ae1cf745cf1.png)
+
+
+![Screenshot from 2021-04-09 23-36-57](https://user-images.githubusercontent.com/36249257/114244465-cbe32980-998e-11eb-8c51-4bf7263abad4.png)
+
+
+
+
+
