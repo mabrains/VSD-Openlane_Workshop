@@ -94,11 +94,11 @@ Decapping_Cells:
 
 ![Screenshot from 2021-04-08 14-43-51](https://user-images.githubusercontent.com/36249257/114032312-7d456a80-987c-11eb-9d54-70b677e06c00.png)
 
-
-
-
+For Placement: run_placement
 
 ![Screenshot from 2021-04-08 16-25-25](https://user-images.githubusercontent.com/36249257/114043988-12e5f780-9887-11eb-9e87-529e5272c39f.png)
+
+The layout after placement stage:
 
 ![Screenshot from 2021-04-08 16-32-19](https://user-images.githubusercontent.com/36249257/114045085-0ca44b00-9888-11eb-8306-85822edc43b8.png)
 
