@@ -152,9 +152,12 @@ Press double 's' , for getting the connected parts:
 
 ![Screenshot from 2021-04-09 23-05-50](https://user-images.githubusercontent.com/36249257/114244446-bec63a80-998e-11eb-9c2d-8ae1cf745cf1.png)
 
+sky130_inv.ext file generation:
 
 ![Screenshot from 2021-04-09 23-36-57](https://user-images.githubusercontent.com/36249257/114244465-cbe32980-998e-11eb-8c51-4bf7263abad4.png)
 
+sky130_inv.spice file generation:
+![Screenshot from 2021-04-10 00-58-26](https://user-images.githubusercontent.com/36249257/114266424-9a05ad80-99f6-11eb-8034-050015d528d2.png)
 
 
 
