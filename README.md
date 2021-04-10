@@ -102,11 +102,53 @@ The layout after placement stage:
 
 ![Screenshot from 2021-04-08 16-32-19](https://user-images.githubusercontent.com/36249257/114045085-0ca44b00-9888-11eb-8306-85822edc43b8.png)
 
+# 3rd day:
+
+### Firstly:
+> - Writing a spice netlist for a CMOS inverter, by describing it's component connectivity, component values, identify nodes and naming them.
+> - varying in (Wp/ Lp) and tracking the switching threshold voltage and tr(rising time), tf(falling time) following this variation.
+###  Secondly:
+> - git clone https://github.com/nickson-jose/vsdstdcelldesign
+> - cd vsdstd_cell
+> - cp sky130A.tech vsdstdceldesign
+> - magic -T sky130A.tech sky130_inv.mag
+> - Here we clone a CMOS layout and copy the technology file in order to be able to open it on magic
+###  Thirdly:
+> - Theoritically we were introduced to the CMOS fabrication process
+> - 1- Selecting a substrate
+> - 2- Create active region for transistor 
+> - 3- N-well & P-well formation
+> - 4- Gate formation
+> - 5- LDD(Lightly Doped Drain) formation
+> - 6- Source & Drain formation
+> - 7- Steps to form contacts & local interconnects
+> - 8- Higher level metal formation 
+### Fourthly:
+> - we extract the parasitics of the fabricated CMOS inverter on magic: extract all
+> - To create a spice netlist that include the parasotics: ext2spice cthresh 0 rthresh 0
+> - ext2spice
+> - This will create the spice netlist needed to be plugged into ngspice to perform simulations on to get important parameters for our design 
+> - Importing to ngspice done by: ngspice sky130_inv.spice
+> - The parameters needed to be calculated: tr(rising time), tf(falling time) , tp(propgation delay)= tpHL(propgation delay from high to low) + tpLH(propgation delay from low to high)
+### Commands Used:
+> - extract all (used on magic for parasitic extraction)
+> - ext2spice cthresh 0 rthresh 0 (for spice netlist generation)
+> - ex2spice (for spice netlist file writing)
+> - ngspice sky130_inv.spice
+
+magic -T sky130A.tech sky130_inv.mag:
+
 ![Screenshot from 2021-04-09 20-38-58](https://user-images.githubusercontent.com/36249257/114244385-a524f300-998e-11eb-94f7-14a70d6ee43b.png)
+
+NMOS Transistor: press 's' , write 'what' on magic terminal: 
 
 ![Screenshot from 2021-04-09 23-01-17](https://user-images.githubusercontent.com/36249257/114244407-ae15c480-998e-11eb-8b7a-9c33fea0a92f.png)
 
+PMOS Transistor: press 's' , write 'what' on magic terminal: 
+
 ![Screenshot from 2021-04-09 23-04-30](https://user-images.githubusercontent.com/36249257/114244420-b7069600-998e-11eb-9288-39b21ee7a1e2.png)
+
+Press double 's' , for getting the connected parts:
 
 ![Screenshot from 2021-04-09 23-05-50](https://user-images.githubusercontent.com/36249257/114244446-bec63a80-998e-11eb-9c2d-8ae1cf745cf1.png)
 
