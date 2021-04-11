@@ -183,11 +183,79 @@ look at the terminal window:
 
 ![Screenshot from 2021-04-10 13-04-37](https://user-images.githubusercontent.com/36249257/114267829-4d25d500-99fe-11eb-8278-db3afeb40b16.png)
 
-> from the previous two values we can calculate tr(rising time): 6.24547 - 6.18169= 0.06378ns 
-> And by the same criteria we can calculate tf(falling time)
-> And the prpgation delay which is defined as (the time taken by the output to reach 50% of its maximum value - the time taken b y the input to reach it's maximum value) 
+> - from the previous two values we can calculate tr(rising time): 6.24547 - 6.18169= 0.06378ns 
+> - And by the same criteria we can calculate tf(falling time)
+> - And the prpgation delay which is defined as (the time taken by the output to reach 50% of its maximum value - the time taken b y the input to reach it's maximum value) 
 
 
 
+# 4th day:
 
+### Firstly:
+> - Timing Modeling Using Delay Tables, as the delay is function of (input transition and output load capacitance)
+> - Every cell with certain functionallity with a certain size has it's own lookup table where we can extract it's cell delay.
+> - If the value we're searching is not found but lies within the table's values, we calculate it using interpolation.
+> - If the value we're searching is not found and lies outside the table's values, we calculate it using extrapolation.
+###  Secondly:
+> - Setup Timing Analysis(STA)
+> - The setup time is the delay time of the launch flip-flop
+###  Thirdly:
+> - Clock Tree Synthesis(CTS) and Signal Integrity
+> - Buffering usng H-Tree algorithm
+> - Clock Shielding and Crosstalk 
+### Fourthly:
+> - Hold Timing Analysis
+### Commands Used:
+> - run_cts
+
+Conditions for our CMOS layout:
+> - The input and output ports or pins must lie on the intersection of the horizontal and vertical tracks.
+> - The hieght and width parameters should be multiples of the track pitch
+On magic:
+press g on magic's terminal window
+grid [x-spacing] [y-spacing] [x-origin] [y-origin]
+This information: x-spacing, y-spacing, [x-origin]  and [y-origin], you can find it under the pdks directory: pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd >>v i tracks          ...to be edited
+Also we've to define pins names:
+in magic:
+selact a certain pin: press 's'
+edit>>text>> Text string A
+             Size(um) 0.15
+             enable 0 
+Also for every pin we have to defins it's class(input or output and it's use)
+on magic's terminal window:
+port class input
+port use signal 
+save file_name.mag
+lef write sky130_vsdinv.lef
+![Screenshot from 2021-04-10 19-25-52](https://user-images.githubusercontent.com/36249257/114290104-55712500-9a7d-11eb-9bc6-a2476533f7df.png)
+
+![Screenshot from 2021-04-10 19-27-20](https://user-images.githubusercontent.com/36249257/114290113-66219b00-9a7d-11eb-9dc2-1098de386aad.png)
+
+![Screenshot from 2021-04-10 20-09-54](https://user-images.githubusercontent.com/36249257/114290124-789bd480-9a7d-11eb-83c2-ac6e34518db6.png)
+
+
+![Screenshot from 2021-04-10 20-10-51](https://user-images.githubusercontent.com/36249257/114290127-7df91f00-9a7d-11eb-87b2-d2dc35ff3496.png)
+
+
+![Screenshot from 2021-04-10 20-18-19](https://user-images.githubusercontent.com/36249257/114290131-86e9f080-9a7d-11eb-85f8-a055d4fb31fe.png)
+
+Negative sLack!!
+i.e. This happens after adding the CMOS inverter
+
+
+![Screenshot from 2021-04-10 21-37-02](https://user-images.githubusercontent.com/36249257/114290164-c6b0d800-9a7d-11eb-8bc9-713db6f92267.png)
+
+![Screenshot from 2021-04-10 21-37-44](https://user-images.githubusercontent.com/36249257/114290169-d2040380-9a7d-11eb-9a13-fb9703233552.png)
+
+![Screenshot from 2021-04-10 21-47-10](https://user-images.githubusercontent.com/36249257/114290179-e21be300-9a7d-11eb-8408-87e75b88326e.png)
+
+![Screenshot from 2021-04-10 21-41-50](https://user-images.githubusercontent.com/36249257/114290173-d92b1180-9a7d-11eb-9d8a-c8166b7f0dd5.png)
+
+![Screenshot from 2021-04-10 21-49-16](https://user-images.githubusercontent.com/36249257/114290194-01b30b80-9a7e-11eb-85b0-6214858456b0.png)
+
+![Screenshot from 2021-04-10 21-55-44](https://user-images.githubusercontent.com/36249257/114290200-0c6da080-9a7e-11eb-9dcd-9112470d76ec.png)
+
+![Screenshot from 2021-04-10 23-57-17](https://user-images.githubusercontent.com/36249257/114290211-198a8f80-9a7e-11eb-8097-d3438a933cc2.png)
+
+![Screenshot from 2021-04-11 03-37-34](https://user-images.githubusercontent.com/36249257/114290228-3aeb7b80-9a7e-11eb-9287-517a108d0bfe.png)
 
