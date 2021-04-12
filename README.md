@@ -52,7 +52,8 @@ Conceptually this is done to support every cell in the design with the amount of
 
 ![Screenshot from 2021-04-12 23-54-37](https://user-images.githubusercontent.com/36249257/114467621-799e4480-9bea-11eb-8752-f3e1b88435c3.png)
 
-> - 3-Placement: placement stage usually done in two steps; global placement followed by detailed placement
+> - 3-Placement: placement stage usually done in two steps; global placement followed by detailed placement.
+Placement Optimization, is the stage where we estimate wire length and capacitance, based on this we insert repeaters(buffers).
 > - 4-Clock Tree Synthesis-CTS-: This stage creates a clock distribution network to provide clock for all the sequential elements in the design with minimum skew(hard to achieve).
 Usually for sensitive signals as clock and power distribution network we specify the higher metal layers for them, where the metal layers of higher thichkness consequently low IR drop. 
 > - 4-Routing: Routing is usually done in two stages, global routing, where our route engine provides a routing guides followed by detailed routing.
@@ -159,6 +160,12 @@ This will cause lowering of voltage at Vdd tap point.
 Simply is to support multiple Vdd & multiple ground.
 This is the reason behind the importance of making an excellent power distribution network in our designs.
 
+### Signal Integrity:
+The signal propgates through our whole design through wires that can be represented by R-C circuit.
+This results in a drop in our signal's voltage.
+This drop may make the consequtive cell reads the signal's value incorrectly, and this will consequently affects our whole design's functionality.
+So, the placement engine estimate the wire's RC values and based on this, the placement engine place repeaters or buffers to maintain the value of the signal.
+
 ![Screenshot from 2021-04-13 00-37-40](https://user-images.githubusercontent.com/36249257/114471203-80c85100-9bf0-11eb-9fc5-fce3829c2e5d.png)
 
 
@@ -185,7 +192,7 @@ This is the reason behind the importance of making an excellent power distributi
 > - 8- Higher level metal formation 
 ### Fourthly:
 > - we extract the parasitics of the fabricated CMOS inverter on magic: extract all
-> - To create a spice netlist that include the parasotics: ext2spice cthresh 0 rthresh 0
+> - To create a spice netlist that include the parasitics: ext2spice cthresh 0 rthresh 0
 > - ext2spice
 > - This will create the spice netlist needed to be plugged into ngspice to perform simulations on to get important parameters for our design 
 > - Importing to ngspice done by: ngspice sky130_inv.spice
