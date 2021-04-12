@@ -38,6 +38,9 @@ Running Synthesis: run_synthesis
 ### A Brief about the ASIC Flow: 
 > - 1- Floor Planning: In chip floorplanning Firstly; we need to determine the core area, the die area and the margin between them which is supposed to be placed in it the inputus, outputs and power pads.
 Then we need to make partitons for whatever Macros and IPs we have to place on our chip.
+In floor planning stage, Macros, tap cells and decapping cells have to be placed.
+Macros & Ips have a user-defined locations and hence are placed on the chip before automated placement engine is called.
+Also in floorplanning, if you open your layout you'll find even your cells are preplaced in the bottom of your design waiting for the placement stage.
 
 ![Screenshot from 2021-04-12 23-42-40](https://user-images.githubusercontent.com/36249257/114466528-e4e71700-9be8-11eb-859f-708208906e59.png)
 
@@ -49,11 +52,28 @@ Conceptually this is done to support every cell in the design with the amount of
 
 ![Screenshot from 2021-04-12 23-54-37](https://user-images.githubusercontent.com/36249257/114467621-799e4480-9bea-11eb-8752-f3e1b88435c3.png)
 
+> - 3-Placement: placement stage usually done in two steps; global placement followed by detailed placement
+> - 4-Clock Tree Synthesis-CTS-: This stage creates a clock distribution network to provide clock for all the sequential elements in the design with minimum skew(hard to achieve).
+Usually for sensitive signals as clock and power distribution network we specify the higher metal layers for them, where the metal layers of higher thichkness consequently low IR drop. 
+> - 4-Routing: Routing is usually done in two stages, global routing, where our route engine provides a routing guides followed by detailed routing.
+The routing strategy between our blocks prefers the routes that provide the minimum number of wires' bends for low resistance values for the wires, hence low delay for the signals.
+> - Lastly the physical verification step, where which we need to check that our design meet certain rules.
+Checks we need to make: Design Rule Check-DRC- , Layout vs Schematic-LVS- , Timing Verification by a Static Timing Analysis Engine-STA-.
+
+### Skywater supports:
+> - hd: High Density Library
+> - hdll: High Density Low Leakage Library
+> - hvl: High Voltage Library
+> - hs: High Speed Library
+> - ms: Medium Speed Library
+> - lp: Low Power Library
+Those Libraries are offered at only three corners: Slow, Fast and Typical
+
 ## 2nd day:
 
 ### Firstly:
 > - Theoritically, It was a revision on some basic concepts:
-Utilization Factor 
+Utilization Factor= Area occupied by the netlist/ The total core area
 Aspect Ratio= Height/ Width
 Concept of Pre-Placed Cells(ex.:decoupling cells, tap-cells, macros) 
 Why we use decoupling cells & tap cells?
@@ -115,6 +135,16 @@ For Placement: run_placement
 The layout after placement stage:
 
 ![Screenshot from 2021-04-08 16-32-19](https://user-images.githubusercontent.com/36249257/114045085-0ca44b00-9888-11eb-8306-85822edc43b8.png)
+
+### Decoupling Cells:
+Conceptually; the problem occurs when we have a high resistance paths, there we find our loads or cells are not supported with the sufficient power they needed to operate correctly.
+Imagine the load or cells are capacitances, in circuit switching from low to high for example, if the load or cells are not supported with the voltage required to charge the capacitor cells then the following load or cells or circuit will not deatermine this switching activity from 0 to 1 hence the functionality of the whole circuit will highly be affected.
+For that, we place decoupling cells that is precharged to charge the our loaad or cells by the sufficient amount of voltage needed for them to operate correctly.
+As the name tells these cells decouple the our logic from the whole circuit.
+We can't use them in all of our design, as they consume large amount of space.
+
+![Screenshot from 2021-04-13 00-37-40](https://user-images.githubusercontent.com/36249257/114471203-80c85100-9bf0-11eb-9fc5-fce3829c2e5d.png)
+
 
 # 3rd day:
 
