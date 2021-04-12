@@ -67,6 +67,7 @@ Checks we need to make: Design Rule Check-DRC- , Layout vs Schematic-LVS- , Timi
 > - hs: High Speed Library
 > - ms: Medium Speed Library
 > - lp: Low Power Library
+
 Those Libraries are offered at only three corners: Slow, Fast and Typical
 
 ## 2nd day:
@@ -139,9 +140,24 @@ The layout after placement stage:
 ### Decoupling Cells:
 Conceptually; the problem occurs when we have a high resistance paths, there we find our loads or cells are not supported with the sufficient power they needed to operate correctly.
 Imagine the load or cells are capacitances, in circuit switching from low to high for example, if the load or cells are not supported with the voltage required to charge the capacitor cells then the following load or cells or circuit will not deatermine this switching activity from 0 to 1 hence the functionality of the whole circuit will highly be affected.
-For that, we place decoupling cells that is precharged to charge the our loaad or cells by the sufficient amount of voltage needed for them to operate correctly.
+For any signal to be considered as logic 0 or logic 1, it should be placed in NML(Noise Margin Low) or NMH(Noise Margin High) respictively.
+The solution is to place a decoupling cell in parallel to our load or cells.
+The decoupling cells are precharged to charge our loaad or cells by the sufficient amount of voltage needed for them to operate correctly.
 As the name tells these cells decouple the our logic from the whole circuit.
+Everytime the circuit switches, it draws current from the pre-charged parallel capacitor that we had placed.
 We can't use them in all of our design, as they consume large amount of space.
+
+### Ground Bouncing:
+When switching from logic 1 to logic 0, this means all the capacitors that were charged to V volts will have to discharge to 0 volts through a single ground.
+This will cause a bump in the ground point.
+
+### Voltage Drop:
+When switching from logic 0 to logic 1, this means all the capacitors will charge from 0 V to V volts from Vdd tap point.
+This will cause lowering of voltage at Vdd tap point.
+
+### The solution for Voltage Drop & The Ground Bouncing:
+Simply is to support multiple Vdd & multiple ground.
+This is the reason behind the importance of making an excellent power distribution network in our designs.
 
 ![Screenshot from 2021-04-13 00-37-40](https://user-images.githubusercontent.com/36249257/114471203-80c85100-9bf0-11eb-9fc5-fce3829c2e5d.png)
 
