@@ -11,10 +11,11 @@
 > - A simplified explanation for RTL2GDS flow.
 > - Strive Family SoCs by Dr. Mohamed Shaalan.
 ###  Thirdly:
-> - The last part was to get familiar practically with the EDA tools and synthesize picorv32 and read the reports. 
+> - The last part was to get familiar practically with the EDA tools and synthesize picorv32a and read the reports. 
 
 ### Commands Used:
 > - Flow.tcl -interactive
+> - package require openlane 0.9
 > - Prep -design picorv32
 > - run_synthesis
 
@@ -34,6 +35,19 @@ Running Synthesis: run_synthesis
 
 ![Screenshot from 2021-04-08 15-06-35](https://user-images.githubusercontent.com/36249257/114031898-1a53d380-987c-11eb-9810-9fc1b16a186e.png)
 
+### A Brief about the ASIC Flow: 
+> - 1- Floor Planning: In chip floorplanning Firstly; we need to determine the core area, the die area and the margin between them which is supposed to be placed in it the inputus, outputs and power pads.
+Then we need to make partitons for whatever Macros and IPs we have to place on our chip.
+
+![Screenshot from 2021-04-12 23-42-40](https://user-images.githubusercontent.com/36249257/114466528-e4e71700-9be8-11eb-859f-708208906e59.png)
+
+
+
+> - 2- Power Planning: In power planning; we determine the power ring, power rails, number of power straps and our power pads.
+The power distribution network is done in this way to decrease the resistance hence, decrease the IR drop and to address the electromigration problem.
+Conceptually this is done to support every cell in the design with the amount of power it needs to operate at certain region, in order not to lose it's functionality and to operate in it's defined and specified regions not in the undefined region.
+
+![Screenshot from 2021-04-12 23-54-37](https://user-images.githubusercontent.com/36249257/114467621-799e4480-9bea-11eb-8752-f3e1b88435c3.png)
 
 ## 2nd day:
 
