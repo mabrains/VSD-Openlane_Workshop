@@ -2,18 +2,10 @@
 
 ## OpenLane Flow
 
-OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, CVC, SPEF-Extractor, CU-GR, Klayout and custom methodology scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII - this capability will be released in the coming weeks with completed SoC design examples that have been sent to SkyWater for fabrication.
+OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, CVC, SPEF-Extractor, CU-GR, Klayout and custom methodology scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
 
-Join the community on slack!
-
-To use the latest stable release of OpenLane, please go here.
 
 ![Screenshot from 2021-04-13 03-43-03](https://user-images.githubusercontent.com/36249257/114484408-731fc500-9c0a-11eb-841b-f379f1e6af30.png)
-
-
-
-
-
 
 
 ## 1st day:
@@ -446,7 +438,6 @@ For more details, refer to configuration/README.md directory, the routing part.
 
 
 ## Acknowledgments
-> - [Kunal Ghosh] (https://github.com
-/kunalg123)
+> - Kunal Ghosh
 > - Praharsha
 > - Akurathi Radhika
