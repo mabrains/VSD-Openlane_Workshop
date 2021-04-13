@@ -393,8 +393,19 @@ This figure shows the hold anlaysis or the minimum delay anlysis
 > - gen_pdn
 > - run_routing
 
-![Screenshot from 2021-04-11 18-37-03](https://user-images.githubusercontent.com/36249257/114482167-6e591200-9c06-11eb-8e64-8ef12a7043b1.png)
+
+gen_pdn
 
 ![Screenshot from 2021-04-11 18-45-51](https://user-images.githubusercontent.com/36249257/114482201-7e70f180-9c06-11eb-98cf-1d5d446991f8.png)
 
+### Finally Generating the GDS-II
 
+Using magic:
+click file 
+then write GDS
+now you're ready to send this file for fabrication.
+
+## Acknowledgments
+> - (Kunal Ghosh) (https://github.com/kunalg123)
+> - Praharsha
+> - Akurathi Radhika
