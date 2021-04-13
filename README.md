@@ -337,10 +337,10 @@ For more information about these environmental variables, go to Configuration/RE
 ![Screenshot from 2021-04-10 21-37-44](https://user-images.githubusercontent.com/36249257/114290169-d2040380-9a7d-11eb-9a13-fb9703233552.png)
 
 ![Screenshot from 2021-04-10 21-41-50](https://user-images.githubusercontent.com/36249257/114290173-d92b1180-9a7d-11eb-9d8a-c8166b7f0dd5.png)
-
-![Screenshot from 2021-04-10 21-47-10](https://user-images.githubusercontent.com/36249257/114290179-e21be300-9a7d-11eb-8408-87e75b88326e.png)
-
+There we will find some enhancements in the slack value, from -17.96 to -5.36 
 ![Screenshot from 2021-04-10 21-49-16](https://user-images.githubusercontent.com/36249257/114290194-01b30b80-9a7e-11eb-85b0-6214858456b0.png)
+But and on the otherhand, area has been increased.
+![Screenshot from 2021-04-10 21-47-10](https://user-images.githubusercontent.com/36249257/114290179-e21be300-9a7d-11eb-8408-87e75b88326e.png)
 
 ![Screenshot from 2021-04-10 21-55-44](https://user-images.githubusercontent.com/36249257/114290200-0c6da080-9a7e-11eb-9dcd-9112470d76ec.png)
 
