@@ -479,5 +479,6 @@ For more details, refer to configuration/README.md directory, the routing part.
 
 ## Acknowledgments
 > - [Kunal Ghosh](https://github.com/kunalg123?tab=repositories)
+> - [Nickson Jose](https://github.com/nickson-jose/vsdstdcelldesign)
 > - Praharsha
 > - Akurathi Radhika
