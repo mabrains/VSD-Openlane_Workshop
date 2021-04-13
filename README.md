@@ -378,3 +378,23 @@ This figure shows the setup anlaysis or the maximum delay anlysis
 ![Screenshot from 2021-04-13 02-00-14](https://user-images.githubusercontent.com/36249257/114477158-056c9c80-9bfc-11eb-88e7-e2f9da8d1b37.png)
 
 This figure shows the hold anlaysis or the minimum delay anlysis
+
+
+## 5th day:
+
+### Firstly:
+
+###  Secondly:
+
+###  Thirdly:
+
+
+### Commands Used:
+> - gen_pdn
+> - run_routing
+
+![Screenshot from 2021-04-11 18-37-03](https://user-images.githubusercontent.com/36249257/114482167-6e591200-9c06-11eb-8e64-8ef12a7043b1.png)
+
+![Screenshot from 2021-04-11 18-45-51](https://user-images.githubusercontent.com/36249257/114482201-7e70f180-9c06-11eb-98cf-1d5d446991f8.png)
+
+
