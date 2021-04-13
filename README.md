@@ -7,6 +7,14 @@ OpenLANE is an automated RTL to GDSII flow based on several components including
 
 ![Screenshot from 2021-04-13 03-43-03](https://user-images.githubusercontent.com/36249257/114484408-731fc500-9c0a-11eb-841b-f379f1e6af30.png)
 
+# Table of contents
+1. [1st day](#1st-day)
+2. [2nd day](#2nd-day)
+    1. [Sub paragraph](#subparagraph1)
+3. [3rd day](#3rd-day)
+4. [4th day](#4th-day)
+5. [5th day](#5th-day)
+
 
 ## 1st day:
 
