@@ -282,21 +282,35 @@ Conditions for our CMOS layout:
 
 On magic:
 press g on magic's terminal window
+
 grid [x-spacing] [y-spacing] [x-origin] [y-origin]
+
 This information: x-spacing, y-spacing, [x-origin]  and [y-origin], you can find it under the pdks directory: pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd 
+
 vi tracks_info
+
 Also we've to define pins names:
+
 in magic:
+
 selact a certain pin: press 's'
+
 edit>>text>> Text string A
              Size(um) 0.15
              enable 0 
+
 Also for every pin we have to defins it's class(input or output and it's use)
+
 on magic's terminal window:
+
 port class input
+
 port use signal 
+
 save file_name.mag
+
 lef write sky130_vsdinv.lef
+
 ![Screenshot from 2021-04-10 19-25-52](https://user-images.githubusercontent.com/36249257/114290104-55712500-9a7d-11eb-9bc6-a2476533f7df.png)
 
 ![Screenshot from 2021-04-10 19-27-20](https://user-images.githubusercontent.com/36249257/114290113-66219b00-9a7d-11eb-9dc2-1098de386aad.png)
