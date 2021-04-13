@@ -1,5 +1,21 @@
 # VSD-Openlane_Workshop
 
+## OpenLane Flow
+
+OpenLANE is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, Fault, OpenPhySyn, CVC, SPEF-Extractor, CU-GR, Klayout and custom methodology scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII - this capability will be released in the coming weeks with completed SoC design examples that have been sent to SkyWater for fabrication.
+
+Join the community on slack!
+
+To use the latest stable release of OpenLane, please go here.
+
+![Screenshot from 2021-04-13 03-43-03](https://user-images.githubusercontent.com/36249257/114484408-731fc500-9c0a-11eb-841b-f379f1e6af30.png)
+
+
+
+
+
+
+
 ## 1st day:
 
 >### It was an introduction to:
@@ -383,11 +399,13 @@ This figure shows the hold anlaysis or the minimum delay anlysis
 ## 5th day:
 
 ### Firstly:
-
+Global & Detailed Routing
 ###  Secondly:
-
+Detailed Routing algorithm used by TritonRoute
 ###  Thirdly:
-
+SPEF Extraction & Analysis
+### Fourthly 
+Post Route STA
 
 ### Commands Used:
 > - gen_pdn
@@ -405,7 +423,30 @@ click file
 then write GDS
 now you're ready to send this file for fabrication.
 
+### Routing
+Routing is done in two steps:
+> - 1- Global Routing by fast route engine
+It's an efficient & a high-quality router.
+> - 2- Detailed Routing by TritonRoute engine
+It's an initial detailed router for advanced VLSI technologies
+TritonRoute, routes within a certain layer parallel and within all the layers sequentially from the bottom to the top and builds vias during routing of the higher metal layer.
+
+The algorithm creates grid.
+The path of the least bends is the prefferable one
+Routing has to follow DRC rules such as the minimum wire spacing, the minimum wire pitch, via enclosure,.. etc.
+For Triton '0' starategy, we can't guarantee 0 DRC violations and we've to fix them manually.
+Triton '13' is the highest effort in routing and the output will have no DRC violations but this will be at the expense of runtime.
+For more details, refer to configuration/README.md directory, the routing part.
+
+### SPEF Extraction
+> - We don't have an extraction engine embedded inside openlane.
+> - To generate it you need to specify the .lef and the .def files.
+> - python3 main.py designs/designn_name/runs/run_name/tmp/merged.lef  designs/designn_name/runs/run_name/results/routing/.def 
+> - A SPEF file will be generated in the same directory of the .def file
+
+
 ## Acknowledgments
-> - [Kunal Ghosh] (https://github.com/kunalg123)
+> - [Kunal Ghosh] (https://github.com
+/kunalg123)
 > - Praharsha
 > - Akurathi Radhika
