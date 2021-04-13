@@ -278,10 +278,13 @@ look at the terminal window:
 Conditions for our CMOS layout:
 > - The input and output ports or pins must lie on the intersection of the horizontal and vertical tracks.
 > - The hieght and width parameters should be multiples of the track pitch
+
+
 On magic:
 press g on magic's terminal window
 grid [x-spacing] [y-spacing] [x-origin] [y-origin]
-This information: x-spacing, y-spacing, [x-origin]  and [y-origin], you can find it under the pdks directory: pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd >>v i tracks          ...to be edited
+This information: x-spacing, y-spacing, [x-origin]  and [y-origin], you can find it under the pdks directory: pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd 
+vi tracks_info
 Also we've to define pins names:
 in magic:
 selact a certain pin: press 's'
