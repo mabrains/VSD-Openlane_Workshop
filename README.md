@@ -337,14 +337,26 @@ For more information about these environmental variables, go to Configuration/RE
 ![Screenshot from 2021-04-10 21-37-44](https://user-images.githubusercontent.com/36249257/114290169-d2040380-9a7d-11eb-9a13-fb9703233552.png)
 
 ![Screenshot from 2021-04-10 21-41-50](https://user-images.githubusercontent.com/36249257/114290173-d92b1180-9a7d-11eb-9d8a-c8166b7f0dd5.png)
+
 There we will find some enhancements in the slack value, from -17.96 to -5.36 
+
 ![Screenshot from 2021-04-10 21-49-16](https://user-images.githubusercontent.com/36249257/114290194-01b30b80-9a7e-11eb-85b0-6214858456b0.png)
+
 But and on the otherhand, area has been increased.
+
+run_placement
 ![Screenshot from 2021-04-10 21-47-10](https://user-images.githubusercontent.com/36249257/114290179-e21be300-9a7d-11eb-8408-87e75b88326e.png)
+
+The layout of the placed cells on magic:
 
 ![Screenshot from 2021-04-10 21-55-44](https://user-images.githubusercontent.com/36249257/114290200-0c6da080-9a7e-11eb-9dcd-9112470d76ec.png)
 
+Here I changed the maximum fanout to 4 and run synthesis again, we find that the slack has been enhanced more
+
 ![Screenshot from 2021-04-10 23-57-17](https://user-images.githubusercontent.com/36249257/114290211-198a8f80-9a7e-11eb-8097-d3438a933cc2.png)
+
+After that, I ran the floorplan and placement again, then I go throgh the cts stage.
+run_cts
 
 ![Screenshot from 2021-04-11 03-37-34](https://user-images.githubusercontent.com/36249257/114290228-3aeb7b80-9a7e-11eb-9287-517a108d0bfe.png)
 
