@@ -326,3 +326,21 @@ i.e. This happens after adding the CMOS inverter
 
 ![Screenshot from 2021-04-11 03-37-34](https://user-images.githubusercontent.com/36249257/114290228-3aeb7b80-9a7e-11eb-9287-517a108d0bfe.png)
 
+### Static Timing Analysis-STA:
+
+![Screenshot from 2021-04-13 01-39-05](https://user-images.githubusercontent.com/36249257/114475791-3ac3bb00-9bf9-11eb-8322-3d8159c75ae5.png)
+
+As the previous figure shows:
+This is the internal structure of the flip flop:
+When the clock is high '1', the first mux reads the input 'D' and the second mux retains it's it's previous value.
+when the clock turns low '0', the first mux retains it's previos value while the second mux reads the output of the first mux.
+The time taken by the first mux to propgate the input inside it's logic is called the setup time.
+The time taken by the second mux to read the value of the first mux and propgate it to it's output is called the hold time.
+
+![Screenshot from 2021-04-13 01-54-36](https://user-images.githubusercontent.com/36249257/114476824-44e6b900-9bfb-11eb-8d4a-cc595f9aa86e.png)
+
+This figure shows the setup anlaysis or the maximum delay anlysis
+
+![Screenshot from 2021-04-13 02-00-14](https://user-images.githubusercontent.com/36249257/114477158-056c9c80-9bfc-11eb-88e7-e2f9da8d1b37.png)
+
+This figure shows the hold anlaysis or the minimum delay anlysis
