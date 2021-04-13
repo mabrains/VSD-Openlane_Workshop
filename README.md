@@ -478,6 +478,6 @@ For more details, refer to configuration/README.md directory, the routing part.
 
 
 ## Acknowledgments
-> - [Kunal Ghosh](#https://github.com/kunalg123?tab=repositories)
+> - [Kunal Ghosh](https://github.com/kunalg123?tab=repositories)
 > - Praharsha
 > - Akurathi Radhika
