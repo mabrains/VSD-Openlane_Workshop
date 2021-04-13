@@ -406,6 +406,6 @@ then write GDS
 now you're ready to send this file for fabrication.
 
 ## Acknowledgments
-> - (Kunal Ghosh) (https://github.com/kunalg123)
+> - [Kunal Ghosh] (https://github.com/kunalg123)
 > - Praharsha
 > - Akurathi Radhika
